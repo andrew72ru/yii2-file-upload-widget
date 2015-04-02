@@ -3,22 +3,9 @@ BlueImp File Upload Widget for Yii2
 
 Renders a [BlueImp jQuery File Upload plugin](http://blueimp.github.io/jQuery-File-Upload/).
 
-Installation
-------------
-The preferred way to install this extension is through [composer](http://getcomposer.org/download/).
+Based on https://github.com/2amigos/yii2-file-upload-widget
 
-Either run
-
-```
-php composer.phar require "2amigos/yii2-file-upload-widget" "*"
-```
-or add
-
-```json
-"2amigos/yii2-file-upload-widget" : "*"
-```
-
-to the require section of your application's `composer.json` file.
+Render widget without Bootstrap, with Foundation
 
 Usage
 -----
@@ -96,7 +83,3 @@ Further Information
 Please, check the [jQuery File Upload documentation](https://github.com/blueimp/jQuery-File-Upload/wiki) for further
 information about its configuration options.
 
-
-> [![2amigOS!](http://www.gravatar.com/avatar/55363394d72945ff7ed312556ec041e0.png)](http://www.2amigos.us)  
-<i>Web development has never been so fun!</i>  
-[www.2amigos.us](http://www.2amigos.us)
