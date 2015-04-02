@@ -4,7 +4,7 @@
  * @link http://2amigos.us
  * @license http://www.opensource.org/licenses/bsd-license.php New BSD License
  */
-namespace dosamigos\fileupload;
+namespace common\fileupload;
 
 use dosamigos\gallery\GalleryAsset;
 use yii\helpers\ArrayHelper;
@@ -43,19 +43,19 @@ class FileUploadUI extends BaseUpload
     /**
      * @var string the form view path to render the JQuery File Upload UI
      */
-    public $formView = '@vendor/2amigos/yii2-file-upload-widget/views/form';
+    public $formView = '@common/fileupload/views/form';
     /**
      * @var string the upload view path to render the js upload template
      */
-    public $uploadTemplateView = '@vendor/2amigos/yii2-file-upload-widget/views/upload';
+    public $uploadTemplateView = '@common/fileupload/views/upload';
     /**
      * @var string the download view path to render the js download template
      */
-    public $downloadTemplateView = '@vendor/2amigos/yii2-file-upload-widget/views/download';
+    public $downloadTemplateView = '@common/fileupload/views/download';
     /**
      * @var string the gallery
      */
-    public $galleryTemplateView = '@vendor/2amigos/yii2-file-upload-widget/views/gallery';
+    public $galleryTemplateView = '@common/fileupload/views/gallery';
 
 
     /**

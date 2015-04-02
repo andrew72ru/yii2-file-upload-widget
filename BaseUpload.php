@@ -4,7 +4,7 @@
  * @link http://2amigos.us
  * @license http://www.opensource.org/licenses/bsd-license.php New BSD License
  */
-namespace dosamigos\fileupload;
+namespace common\fileupload;
 
 use Yii;
 use yii\base\InvalidConfigException;
@@ -15,10 +15,6 @@ use yii\widgets\InputWidget;
  * BaseUpload
  *
  * Base class for both uploaders.
- * @author Antonio Ramirez <amigo.cobos@gmail.com>
- * @link http://www.ramirezcobos.com/
- * @link http://www.2amigos.us/
- * @package dosamigos\fileupload
  */
 class BaseUpload extends InputWidget
 {
@@ -63,11 +59,10 @@ class BaseUpload extends InputWidget
      */
     public function initI18N()
     {
-        Yii::setAlias('@fileupload', dirname(__FILE__));
         if (empty($this->i18n)) {
             $this->i18n = [
                 'sourceLanguage' => 'en',
-                'basePath' => '@fileupload/messages',
+                'basePath' => '@common/fileupload/messages',
                 'class' => 'yii\i18n\PhpMessageSource',
             ];
         }

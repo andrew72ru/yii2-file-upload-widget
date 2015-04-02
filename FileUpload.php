@@ -4,7 +4,7 @@
  * @link http://2amigos.us
  * @license http://www.opensource.org/licenses/bsd-license.php New BSD License
  */
-namespace dosamigos\fileupload;
+namespace common\fileupload;
 
 
 use yii\helpers\Html;
@@ -15,11 +15,6 @@ use yii\helpers\Url;
  * FileUpload
  *
  * Widget to render the jQuery File Upload Basic Uploader
- *
- * @author Antonio Ramirez <amigo.cobos@gmail.com>
- * @link http://www.ramirezcobos.com/
- * @link http://www.2amigos.us/
- * @package dosamigos\fileupload
  */
 class FileUpload extends BaseUpload
 {

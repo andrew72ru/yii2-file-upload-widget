@@ -1,6 +1,6 @@
 <?php
-/** @var \dosamigos\fileupload\FileUploadUI $this */
-use yii\helpers\Html;
+/** @var \common\modules\fileupload\FileUploadUI $this */
+use common\modules\foundation\helpers\Html;
 
 $context = $this->context;
 ?>
