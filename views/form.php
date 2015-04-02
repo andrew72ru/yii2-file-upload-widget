@@ -8,7 +8,7 @@ $context = $this->context;
 <?= Html::beginForm($context->url, 'post', $context->options); ?>
     <!-- The fileupload-buttonbar contains buttons to add/delete files and start/cancel the upload -->
     <div class="row fileupload-buttonbar">
-        <div class="col-lg-7">
+        <div class="columns small-12 medium-12 large-7">
             <!-- The fileinput-button span is used to style the file input field as button -->
             <span class="btn btn-success fileinput-button">
                 <i class="glyphicon glyphicon-plus"></i>
@@ -36,10 +36,10 @@ $context = $this->context;
             <span class="fileupload-process"></span>
         </div>
         <!-- The global progress state -->
-        <div class="col-lg-5 fileupload-progress fade">
+        <div class="columns small-12 medium-12 large-5 fileupload-progress fade">
             <!-- The global progress bar -->
-            <div class="progress progress-striped active" role="progressbar" aria-valuemin="0" aria-valuemax="100">
-                <div class="progress-bar progress-bar-success" style="width:0%;"></div>
+            <div class="progress active" role="progressbar" aria-valuemin="0" aria-valuemax="100">
+                <span class="meter" style="width:0%;"></span>
             </div>
             <!-- The extended global progress state -->
             <div class="progress-extended">&nbsp;</div>
