@@ -1,7 +1,5 @@
 <?php
 /**
- * @copyright Copyright (c) 2013 2amigOS! Consulting Group LLC
- * @link http://2amigos.us
  * @license http://www.opensource.org/licenses/bsd-license.php New BSD License
  */
 namespace common\fileupload;
@@ -10,15 +8,10 @@ use yii\web\AssetBundle;
 
 /**
  * FileUploadPlusAsset
- *
- * @author Antonio Ramirez <amigo.cobos@gmail.com>
- * @link http://www.ramirezcobos.com/
- * @link http://www.2amigos.us/
- * @package dosamigos\fileupload
  */
 class FileUploadPlusAsset extends AssetBundle
 {
-    public $sourcePath = '@vendor/2amigos/yii2-file-upload-widget/assets/';
+    public $sourcePath = '@common/fileupload/assets/';
 
     public $css = [
         'blueimp-file-upload/css/jquery.fileupload.css'

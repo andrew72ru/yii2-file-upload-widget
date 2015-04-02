@@ -1,7 +1,5 @@
 <?php
 /**
- * @copyright Copyright (c) 2013 2amigOS! Consulting Group LLC
- * @link http://2amigos.us
  * @license http://www.opensource.org/licenses/bsd-license.php New BSD License
  */
 namespace common\fileupload;
@@ -15,11 +13,6 @@ use yii\helpers\Json;
  *
  * Widget to render the jQuery File Upload UI plugin as shown in
  * [its demo](http://blueimp.github.io/jQuery-File-Upload/index.html)
- *
- * @author Antonio Ramirez <amigo.cobos@gmail.com>
- * @link http://www.ramirezcobos.com/
- * @link http://www.2amigos.us/
- * @package dosamigos\fileupload
  */
 class FileUploadUI extends BaseUpload
 {

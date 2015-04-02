@@ -1,7 +1,5 @@
 <?php
 /**
- * @copyright Copyright (c) 2013 2amigOS! Consulting Group LLC
- * @link http://2amigos.us
  * @license http://www.opensource.org/licenses/bsd-license.php New BSD License
  */
 namespace common\fileupload;
@@ -10,11 +8,6 @@ use yii\web\AssetBundle;
 
 /**
  * FileUploadUIAsset
- *
- * @author Antonio Ramirez <amigo.cobos@gmail.com>
- * @link http://www.ramirezcobos.com/
- * @link http://www.2amigos.us/
- * @package dosamigos\fileupload
  */
 class FileUploadUIAsset extends AssetBundle
 {
@@ -42,6 +35,5 @@ class FileUploadUIAsset extends AssetBundle
 
     public $depends = [
         'yii\web\JqueryAsset',
-        'yii\bootstrap\BootstrapPluginAsset',
     ];
 } 
