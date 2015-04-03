@@ -3,11 +3,8 @@
 {% for (var i=0, file; file=o.files[i]; i++) { %}
     <tr class="template-upload fade">
         <td>
-            <span class="preview"></span>
-        </td>
-        <td>
-            <p class="name">{%=file.name%}</p>
-            <strong class="error text-danger"></strong>
+            <p class="name"><strong>{%=file.name%}</strong></p>
+            <strong class="error alert-text"></strong>
         </td>
         <td>
             <p class="size"><?= Yii::t('fileupload', 'Processing') ?>...</p>
