@@ -29,6 +29,6 @@ class FileUploadPlusAsset extends AssetBundle
     ];
 
     public $depends = [
-        'dosamigos\fileupload\FileUploadAsset',
+        'common\fileupload\FileUploadAsset',
     ];
 } 
