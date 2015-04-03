@@ -9,7 +9,7 @@ $context = $this->context;
     <!-- The fileupload-buttonbar contains buttons to add/delete files and start/cancel the upload -->
     <div class="container fileupload-buttonbar">
         <div class="columns small-12 medium-12 large-12">
-            <ul class="button-group even-4">
+            <ul class="button-group even-3">
             <!-- The fileinput-button span is used to style the file input field as button -->
                 <li>
                     <button class="button fileinput-button">
@@ -32,12 +32,6 @@ $context = $this->context;
                     <button type="reset" class="button cancel">
                         <?= Html::icon('prohibited')?>
                         <span><?= Yii::t('fileupload', 'Cancel upload') ?></span>
-                    </button>
-                </li>
-                <li>
-                    <button type="button" class="button delete">
-                        <?= Html::icon('trash')?>
-                        <span><?= Yii::t('fileupload', 'Delete') ?></span>
                     </button>
                 </li>
             </ul>
