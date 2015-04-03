@@ -11,21 +11,27 @@
         </td>
         <td>
             <p class="size"><?= Yii::t('fileupload', 'Processing') ?>...</p>
-            <div class="progress progress-striped active" role="progressbar" aria-valuemin="0" aria-valuemax="100" aria-valuenow="0"><div class="progress-bar progress-bar-success" style="width:0%;"></div></div>
+            <div class="progress" role="progressbar" aria-valuemin="0" aria-valuemax="100" aria-valuenow="0"><span class="meter" style="width:0%;"></span></div>
         </td>
         <td>
+            <ul class="button-group even-2">
             {% if (!i && !o.options.autoUpload) { %}
-                <button class="btn btn-primary start" disabled>
-                    <i class="glyphicon glyphicon-upload"></i>
+                <li>
+                <button class="button success start" disabled>
+                    <i class="fi-upload"></i>
                     <span><?= Yii::t('fileupload', 'Start') ?></span>
                 </button>
+                </li>
             {% } %}
             {% if (!i) { %}
-                <button class="btn btn-warning cancel">
-                    <i class="glyphicon glyphicon-ban-circle"></i>
+                <li>
+                <button class="button warning cancel">
+                    <i class="fi-prohibited"></i>
                     <span><?= Yii::t('fileupload', 'Cancel') ?></span>
                 </button>
+                </li>
             {% } %}
+            </ul>
         </td>
     </tr>
 {% } %}

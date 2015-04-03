@@ -7,36 +7,46 @@ $context = $this->context;
     <!-- The file upload form used as target for the file upload widget -->
 <?= Html::beginForm($context->url, 'post', $context->options); ?>
     <!-- The fileupload-buttonbar contains buttons to add/delete files and start/cancel the upload -->
-    <div class="row fileupload-buttonbar">
-        <div class="columns small-12 medium-12 large-7">
+    <div class="container fileupload-buttonbar">
+        <div class="columns small-12 medium-12 large-12">
+            <ul class="button-group even-4">
             <!-- The fileinput-button span is used to style the file input field as button -->
-            <span class="btn btn-success fileinput-button">
-                <i class="glyphicon glyphicon-plus"></i>
-                <span><?= Yii::t('fileupload', 'Add files') ?>...</span>
+                <li>
+                    <button class="button fileinput-button">
+                        <?= Html::icon('plus')?>
+                        <span><?= Yii::t('fileupload', 'Add files') ?>...</span>
 
-                <?= $context->model instanceof \yii\base\Model && $context->attribute !== null
-                    ? Html::activeFileInput($context->model, $context->attribute, $context->fieldOptions)
-                    : Html::fileInput($context->name, $context->value, $context->fieldOptions);?>
+                        <?= $context->model instanceof \yii\base\Model && $context->attribute !== null
+                            ? Html::activeFileInput($context->model, $context->attribute, $context->fieldOptions)
+                            : Html::fileInput($context->name, $context->value, $context->fieldOptions);?>
 
-            </span>
-            <button type="submit" class="btn btn-primary start">
-                <i class="glyphicon glyphicon-upload"></i>
-                <span><?= Yii::t('fileupload', 'Start upload') ?></span>
-            </button>
-            <button type="reset" class="btn btn-warning cancel">
-                <i class="glyphicon glyphicon-ban-circle"></i>
-                <span><?= Yii::t('fileupload', 'Cancel upload') ?></span>
-            </button>
-            <button type="button" class="btn btn-danger delete">
-                <i class="glyphicon glyphicon-trash"></i>
-                <span><?= Yii::t('fileupload', 'Delete') ?></span>
-            </button>
-            <input type="checkbox" class="toggle">
+                    </button>
+                </li>
+                <li>
+                    <button type="submit" class="button start">
+                        <?= Html::icon('upload')?>
+                        <span><?= Yii::t('fileupload', 'Start upload') ?></span>
+                    </button>
+                </li>
+                <li>
+                    <button type="reset" class="button cancel">
+                        <?= Html::icon('prohibited')?>
+                        <span><?= Yii::t('fileupload', 'Cancel upload') ?></span>
+                    </button>
+                </li>
+                <li>
+                    <button type="button" class="button delete">
+                        <?= Html::icon('trash')?>
+                        <span><?= Yii::t('fileupload', 'Delete') ?></span>
+                    </button>
+                </li>
+            </ul>
+            <!--<input type="checkbox" class="toggle">-->
             <!-- The global file processing state -->
             <span class="fileupload-process"></span>
         </div>
         <!-- The global progress state -->
-        <div class="columns small-12 medium-12 large-5 fileupload-progress fade">
+        <div class="columns small-12 medium-12 large-12 fileupload-progress fade">
             <!-- The global progress bar -->
             <div class="progress active" role="progressbar" aria-valuemin="0" aria-valuemax="100">
                 <span class="meter" style="width:0%;"></span>
@@ -44,7 +54,9 @@ $context = $this->context;
             <!-- The extended global progress state -->
             <div class="progress-extended">&nbsp;</div>
         </div>
+        <div class="columns small-12 medium-12 large-12">
+            <table role="presentation" class="small-12 medium-12 large-12"><tbody class="files"></tbody></table>
+        </div>
     </div>
     <!-- The table listing the files available for upload/download -->
-    <table role="presentation" class="table table-striped"><tbody class="files"></tbody></table>
 <?= Html::endForm();?>
