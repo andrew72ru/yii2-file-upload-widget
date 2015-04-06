@@ -7,36 +7,24 @@ $context = $this->context;
     <!-- The file upload form used as target for the file upload widget -->
 <?= Html::beginForm($context->url, 'post', $context->options); ?>
     <!-- The fileupload-buttonbar contains buttons to add/delete files and start/cancel the upload -->
-    <div class="fileupload-buttonbar">
+    <div class="fileupload-buttonbar row">
         <div class="columns small-12 medium-12 large-12">
-            <ul class="button-group even-3">
-            <!-- The fileinput-button span is used to style the file input field as button -->
-                <li>
-                    <button class="button fileinput-button">
-                        <?= Html::icon('plus')?>
-                        <span><?= Yii::t('fileupload', 'Add files') ?>...</span>
-
-                        <?= $context->model instanceof \yii\base\Model && $context->attribute !== null
-                            ? Html::activeFileInput($context->model, $context->attribute, $context->fieldOptions)
-                            : Html::fileInput($context->name, $context->value, $context->fieldOptions);?>
-
-                    </button>
-                </li>
-                <li>
-                    <button type="submit" class="button start">
-                        <?= Html::icon('upload')?>
-                        <span><?= Yii::t('fileupload', 'Start upload') ?></span>
-                    </button>
-                </li>
-                <li>
-                    <button type="reset" class="button cancel">
-                        <?= Html::icon('prohibited')?>
-                        <span><?= Yii::t('fileupload', 'Cancel upload') ?></span>
-                    </button>
-                </li>
-            </ul>
-            <!--<input type="checkbox" class="toggle">-->
-            <!-- The global file processing state -->
+	        <a class="button fileinput-button small-4 medium-4 large-4 columns">
+		        <?= Html::icon('plus')?><span><?= Yii::t('fileupload', 'Add files') ?>...</span>
+		        <?= $context->model instanceof \yii\base\Model && $context->attribute !== null
+			        ? Html::activeFileInput($context->model, $context->attribute, $context->fieldOptions)
+			        : Html::fileInput($context->name, $context->value, $context->fieldOptions);?>
+	        </a>
+	        <button type="submit" class="button small-4 medium-4 large-4 columns start">
+		        <?= Html::icon('upload')?>
+		        <span><?= Yii::t('fileupload', 'Start upload') ?></span>
+	        </button>
+	        <button type="reset" class="button  small-4 medium-4 large-4 columns cancel">
+		        <?= Html::icon('prohibited')?>
+		        <span><?= Yii::t('fileupload', 'Cancel upload') ?></span>
+	        </button>
+        </div>
+	    <div class="columns small-12 medium-12 large-12">
             <span class="fileupload-process"></span>
         </div>
         <!-- The global progress state -->
