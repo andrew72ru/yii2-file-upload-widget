@@ -19,7 +19,7 @@
  */
 return [
     'Add files' => 'Добавить файлы',
-    'Start upload' => 'Начать загрузку',
+    'Start upload' => 'Загрузить всё',
     'Cancel upload' => 'Отменить загрузку',
     'Start' => 'Старт',
     'Cancel' => 'Отмена',
