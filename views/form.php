@@ -7,7 +7,7 @@ $context = $this->context;
     <!-- The file upload form used as target for the file upload widget -->
 <?= Html::beginForm($context->url, 'post', $context->options); ?>
     <!-- The fileupload-buttonbar contains buttons to add/delete files and start/cancel the upload -->
-    <div class="container fileupload-buttonbar">
+    <div class="fileupload-buttonbar">
         <div class="columns small-12 medium-12 large-12">
             <ul class="button-group even-3">
             <!-- The fileinput-button span is used to style the file input field as button -->
@@ -40,7 +40,7 @@ $context = $this->context;
             <span class="fileupload-process"></span>
         </div>
         <!-- The global progress state -->
-        <div class="columns small-12 medium-12 large-12 fileupload-progress fade">
+        <div class="columns small-12 medium-12 large-12 fileupload-progress hide fade">
             <!-- The global progress bar -->
             <div class="progress active" role="progressbar" aria-valuemin="0" aria-valuemax="100">
                 <span class="meter" style="width:0%;"></span>
@@ -49,7 +49,7 @@ $context = $this->context;
             <div class="progress-extended">&nbsp;</div>
         </div>
         <div class="columns small-12 medium-12 large-12">
-            <table role="presentation" class="small-12 medium-12 large-12"><tbody class="files"></tbody></table>
+            <table role="presentation" class="hide fade small-12 medium-12 large-12"><tbody class="files"></tbody></table>
         </div>
     </div>
     <!-- The table listing the files available for upload/download -->
