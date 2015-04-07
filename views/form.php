@@ -10,7 +10,7 @@ $context = $this->context;
     <div class="fileupload-buttonbar row">
         <div class="columns small-12 medium-12 large-12">
 	        <a class="button fileinput-button small-4 medium-4 large-4 columns">
-		        <?= Html::icon('plus')?><span><?= Yii::t('fileupload', 'Add files') ?>...</span>
+		        <?= Html::icon('plus')?> <span><?= Yii::t('fileupload', 'Add files') ?>...</span>
 		        <?= $context->model instanceof \yii\base\Model && $context->attribute !== null
 			        ? Html::activeFileInput($context->model, $context->attribute, $context->fieldOptions)
 			        : Html::fileInput($context->name, $context->value, $context->fieldOptions);?>
