@@ -6,29 +6,25 @@
             <p class="name"><strong>{%=file.name%}</strong></p>
             <strong class="error alert-text"></strong>
         </td>
-        <td>
+        <td style="width: 60%;">
             <p class="size"><?= Yii::t('fileupload', 'Processing') ?>...</p>
-            <div class="progress" role="progressbar" aria-valuemin="0" aria-valuemax="100" aria-valuenow="0"><span class="meter" style="width:0%;"></span></div>
+            <div class="progress progress-striped active" role="progressbar" aria-valuemin="0" aria-valuemax="100" aria-valuenow="0"><div class="progress-bar progress-bar-success" style="width:0%;"></div></div>
         </td>
         <td>
-            <ul class="button-group even-2">
+            <div class="btn-group">
             {% if (!i && !o.options.autoUpload) { %}
-                <li>
-                <button class="button success start" disabled>
-                    <i class="fi-upload"></i>
+                <button class="btn btn-success start" disabled>
+                    <i class="fa fa-upload"></i>
                     <span><?= Yii::t('fileupload', 'Start') ?></span>
                 </button>
-                </li>
             {% } %}
             {% if (!i) { %}
-                <li>
-                <button class="button warning cancel">
-                    <i class="fi-prohibited"></i>
+                <button class="btn btn-warning cancel">
+                    <i class="fa fa-ban"></i>
                     <span><?= Yii::t('fileupload', 'Cancel') ?></span>
                 </button>
-                </li>
             {% } %}
-            </ul>
+            </div>
         </td>
     </tr>
 {% } %}
